@@ -20,6 +20,7 @@ ARG EXT="jupyterlab_executor-latest.tar.gz"
 ARG URL="${EXTENSION_BUCKET}/${EXT}"
 RUN gsutil cp "${URL}" "/tmp/${EXT}"
 RUN pip install "/tmp/${EXT}"
+ENV MIPRUEBA="PROBANDO"
 
 RUN jupyter lab build
 
